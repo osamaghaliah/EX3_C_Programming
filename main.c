@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <func.h>
+#include "func.h"
 #include <string.h>
 #define TXT 1024
 #define WORD 30 
