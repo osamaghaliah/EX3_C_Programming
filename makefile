@@ -1,15 +1,15 @@
 CC=gcc
 FLAGS=-Wall -g
-EXE =stringProg
+EXE=stringProg
 OBJECTS_MAIN=main.o
 
 #target commands
 all: $(EXE)
-$(EXE): $(OBJECTS_MAIN) func.h
+$(EXE): $(OBJECTS_MAIN)
 	$(CC) $(OBJECTS_MAIN) -o $(EXE)
-main.o: main.c func.h  
+$(OBJECTS_MAIN): main.c func.h
 	$(CC) $(FLAGS) -c main.c
 
 .PHONY: clean all
 clean:
-	rm -f *.o stringProg
+	rm -f *.o $(EXE)
