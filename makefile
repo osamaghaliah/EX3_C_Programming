@@ -1,11 +1,11 @@
 CC=gcc
-FLAGS= -Wall -g
-EXE = stringProg
+FLAGS=-Wall -g
+EXE =stringProg
 OBJECTS_MAIN=main.o
 
 #target commands
 all: $(EXE)
-$(EXE): $(OBJECTS_MAIN) 
+$(EXE): $(OBJECTS_MAIN) func.h
 	$(CC) $(OBJECTS_MAIN) -o $(EXE)
 main.o: main.c func.h  
 	$(CC) $(FLAGS) -c main.c
