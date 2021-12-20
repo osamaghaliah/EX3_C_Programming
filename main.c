@@ -198,7 +198,6 @@ int main() {
     atbash(atb,txt,atbResult);
     printf("\nAtbash Sequences: %s", atbResult);
     anagram(&wrd, &txt);
-    printf("\n");
 
     return 0;
 }
