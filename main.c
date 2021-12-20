@@ -16,7 +16,7 @@ int count(char wrd[WORD]) {
 }
 
 void gematria(char wrd[WORD], char txt[TXT]) {
-    printf("\nGematria Sequences: ");
+    printf("Gematria Sequences: ");
 
     int cnt = count(wrd);
     char word[WORD];
