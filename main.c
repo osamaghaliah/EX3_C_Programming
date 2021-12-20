@@ -174,14 +174,12 @@ int main() {
     char wrd[WORD];
     char txt[TXT];
 
-    printf("Please start entering your word's characters: ");
     for (int i = 0; i < WORD; i++) {
         scanf("%c", &wrd[i]);
         if (wrd[i] == '\t' || wrd[i] == '\n' || wrd[i] == ' ')
             break;
     }
     
-    printf("Please start entering your text's characters: ");
     for (int i = 0; i < TXT; i++) {
         scanf("%c", &txt[i]);
         if (txt[i] == '~')
