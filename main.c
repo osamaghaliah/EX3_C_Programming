@@ -18,7 +18,7 @@ int count(char wrd[WORD]) {
 }
 
 void gematria(char wrd[WORD], char txt[TXT]) {
-    printf("Gematria Sequences: ");
+    printf("\nGematria Sequences: ");
 
     int cnt = count(wrd);
     char word[WORD];
@@ -81,7 +81,6 @@ void gematria(char wrd[WORD], char txt[TXT]) {
             }
         }
     }
-    printf("\n");
 }
 
 
@@ -123,7 +122,7 @@ int allStars(char tst[WORD]) { // checks if the whole word is *'s.
 }
 
 void anagram(char (*ang)[WORD], char (*txt)[TXT]) {
-    printf("Anagram Sequences: ");
+    printf("\nAnagram Sequences: ");
 
     char temp[WORD];
     char res[TXT];
@@ -175,12 +174,14 @@ int main() {
     char wrd[WORD];
     char txt[TXT];
 
+    printf("Please start entering your word's characters: ");
     for (int i = 0; i < WORD; i++) {
         scanf("%c", &wrd[i]);
         if (wrd[i] == '\t' || wrd[i] == '\n' || wrd[i] == ' ')
             break;
     }
     
+    printf("Please start entering your text's characters: ");
     for (int i = 0; i < TXT; i++) {
         scanf("%c", &txt[i]);
         if (txt[i] == '~')
@@ -204,8 +205,7 @@ int main() {
 
     char atbResult[WORD] = "";
     atbash(atb,txt,atbResult);
-    printf("Atbash Sequences: %s", atbResult);
-    printf("\n");
+    printf("\nAtbash Sequences: %s", atbResult);
     anagram(&wrd, &txt);
 
     return 0;
