@@ -5,8 +5,8 @@ OBJECTS_MAIN=main.c
 
 all: $(EXE)
 $(EXE): $(OBJECTS_MAIN)
-	$(CC) $(FLAGS) $(OBJECTS_MAIN) -o $(EXE)
+	$(CC) $(OBJECTS_MAIN) -o $(EXE)
 
 .PHONY: clean all
 clean:
-	rm -f *.o $(EXE)
+	rm -f *.o stringProg $(EXE)
