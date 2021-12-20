@@ -8,7 +8,7 @@ int count(char wrd[WORD]) {
     int cnt=0;
     
     for(int i=0; i<WORD; i++) {
-        if (wrd[i] == '\t' || wrd[i] == '\n' || wrd[i] == '\0') break;
+        if (wrd[i] == '\t' || wrd[i] == '\n' || wrd[i] == ' ') break;
         if (wrd[i] > 96 && wrd[i] < 123) cnt += wrd[i] - 96;
     }
 
@@ -85,7 +85,7 @@ void atbash(char wrd[WORD], char txt[TXT], char *result){
     int bad = 0;
     
     for(int i = 0; i < TXT; i++) {
-        if (wrd[i]=='\0' || wrd[i]=='\t' || wrd[i]=='\n') break;
+        if (wrd[i] == ' ' || wrd[i]=='\t' || wrd[i]=='\n') break;
         
         if(wrd[i] != txt[i]) {
             bad=1;
@@ -167,20 +167,17 @@ void anagram(char (*ang)[WORD], char (*txt)[TXT]) {
 int main() {
     char wrd[WORD];
     char txt[TXT];
-    char x = '0';
 
     printf("Please start entering your word's characters: ");
     for (int i=0; i<WORD; i++) {
-        scanf("%c", &x);
-        wrd[i] = x;
-        if (x == '\t' || x == '\n' || x == '\0') break;
+        scanf("%c", &wrd[i]);
+        if (wrd[i] == '\t' || wrd[i] == '\n' || wrd[i] == ' ') break;
     }
     
     printf("Please start entering your text's characters: ");
     for (int i = 0; i < TXT; i++) {
-        scanf("%c", &x);
-        txt[i] = x;
-        if (x == '~') break;
+        scanf("%c", &txt[i]);
+        if (txt[i] == '~') break;
     }
     
     gematria(wrd, txt);
